@@ -33,3 +33,20 @@ source ~/.bashrc
 ```
 VBoxManage --version
 ```
+STEP 2 — Disable Hyper-V, WSL2, Memory Integrity
+
+VirtualBox cannot run if these are ON.
+
+Run this in PowerShell (ADMIN):
+```
+bcdedit /set hypervisorlaunchtype off
+```
+
+Disable Windows features:
+```
+Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
+Disable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Disable-WindowsOptionalFeature -Online -FeatureName Windows-Subsystem-Linux
+```
+
+Restart the system.
