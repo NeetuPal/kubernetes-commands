@@ -91,3 +91,9 @@ kubectl exec -it vault-0 -n vault -- vault status
 helm list -A
 
 ```
+```
+helm uninstall vault -n vault 2>/dev/null
+```
+```
+kubectl delete namespace vault 2>/dev/null
+```
