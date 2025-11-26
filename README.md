@@ -54,3 +54,8 @@ Disable-WindowsOptionalFeature -Online -FeatureName Windows-Subsystem-Linux
 ```
 
 Restart the system.
+
+```
+kubectl delete namespace webapps --force --grace-period=0
+
+```
