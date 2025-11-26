@@ -63,3 +63,12 @@ kubectl delete namespace webapps --force --grace-period=0
 helm search repo vault
 
 ```
+```
+helm install vault hashicorp/vault -n vault --create-namespace -f values.yaml
+
+```
+
+```
+helm upgrade vault hashicorp/vault -n vault -f values.yaml
+
+```
