@@ -97,3 +97,7 @@ helm uninstall vault -n vault 2>/dev/null
 ```
 kubectl delete namespace vault 2>/dev/null
 ```
+```
+kubectl exec -n vault -it vault-0 -- vault read auth/kubernetes/role/vault-role
+
+```
