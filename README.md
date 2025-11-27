@@ -175,3 +175,10 @@ TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
 ```
 echo $TOKEN | cut -d "." -f2 | base64 -d 2>/dev/null | tr ',' '\n' | grep '"aud"'
 ```
+```
+kubectl exec -n vault vault-0 -- vault policy read myapp-policy
+```
+```
+kubectl exec -n vault vault-0 -- vault kv list secret/
+
+```
