@@ -113,3 +113,7 @@ kind get clusters
 kubectl cluster-info
 
 ```
+```
+kubectl logs -n webapps mysql-f758f45f5-vnh46 -c vault-agent-init
+
+```
