@@ -157,3 +157,10 @@ kubectl get events -n webapps --sort-by=.metadata.creationTimestamp
 kubectl exec -n vault -it vault-0 -- vault auth list
 
 ```
+```
+git fetch origin
+```
+```
+git pull origin main
+
+```
