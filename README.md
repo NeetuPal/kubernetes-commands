@@ -117,3 +117,39 @@ kubectl cluster-info
 kubectl logs -n webapps mysql-f758f45f5-vnh46 -c vault-agent-init
 
 ```
+```
+kubectl get nodes -o wide
+
+```
+```
+TOKEN=$(kubectl -n webapps create token vault-auth)
+
+```
+```
+kubectl get deploy -n webapps
+
+```
+```
+kubectl rollout restart deployment bankapp -n webapps
+
+```
+```
+kubectl describe deploy bankapp -n webapps
+
+```
+```
+kubectl run temp --image=neet95402927/bankapp1:v161 -n webapps --rm -it -- /bin/sh
+
+```
+```
+kubectl get sa vault-auth -n webapps -o yaml
+
+```
+```
+kubectl patch sa vault-auth -n webapps -p '{"automountServiceAccountToken":true}'
+
+```
+```
+kubectl get events -n webapps --sort-by=.metadata.creationTimestamp
+
+```
