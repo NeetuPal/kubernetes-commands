@@ -101,3 +101,15 @@ kubectl delete namespace vault 2>/dev/null
 kubectl exec -n vault -it vault-0 -- vault read auth/kubernetes/role/vault-role
 
 ```
+# open docker desktop on mac
+```
+open /Applications/Docker.app
+```
+```
+kind get clusters
+
+```
+```
+kubectl cluster-info
+
+```
