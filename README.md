@@ -164,3 +164,14 @@ git fetch origin
 git pull origin main
 
 ```
+```
+kubectl get pod mysql-f758f45f5-pq92t -n webapps -o jsonpath='{.spec.containers[*].name}{"\n"}{.spec.initContainers[*].name}{"\n"}'
+```
+# Get the token
+```
+TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
+```
+# Decode the payload (middle part of JWT) and pretty-print it
+```
+echo $TOKEN | cut -d "." -f2 | base64 -d 2>/dev/null | tr ',' '\n' | grep '"aud"'
+```
